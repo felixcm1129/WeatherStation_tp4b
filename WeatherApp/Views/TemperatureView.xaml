@@ -10,7 +10,7 @@
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="Ville :"/>
             <!-- TODO 03 : Bindings -->
-            <TextBox Text="Bindings are important" Width="200"/>
+            <TextBox Text="{Binding City}"  Width="200"/>
         </StackPanel>
         <Button DockPanel.Dock="Top" Content="Load content" Command="{Binding GetTempCommand}"/>
         <TextBox Text="{Binding RawText, Mode=OneWay}"/>

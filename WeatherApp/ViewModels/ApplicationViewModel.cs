@@ -72,7 +72,6 @@ namespace WeatherApp.ViewModels
             ViewModels.Add(vm);
 
             CurrentViewModel = ViewModels[0];
-            CurrentViewModel = ViewModels[1];
         }
 
         private void ChangePage(string pageName)

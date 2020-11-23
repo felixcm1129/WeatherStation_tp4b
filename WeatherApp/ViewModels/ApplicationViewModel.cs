@@ -49,8 +49,8 @@ namespace WeatherApp.ViewModels
             ChangePageCommand = new DelegateCommand<string>(ChangePage);
            
             /// TODO 11 : Commenter cette ligne lorsque la configuration utilisateur fonctionne
-            var apiKey = AppConfiguration.GetValue("OWApiKey");
-            ows = new OpenWeatherService(apiKey);
+            //var apiKey = AppConfiguration.GetValue("OWApiKey");
+            ows = new OpenWeatherService(Properties.Settings.Default.apiKey);
 
             initViewModels();
         }

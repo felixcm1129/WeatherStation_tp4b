@@ -34,6 +34,7 @@ namespace WeatherApp.ViewModels
             /// TODO 04a : Sauvegarder la configuration
             Properties.Settings.Default.apiKey = key;
             Properties.Settings.Default.Save();
+            ApiKey = key;
         }
 
         private string GetApiKey()

@@ -73,7 +73,7 @@ namespace OpenWeatherAPI
         /// <returns></returns>
         public async Task<OWCurrentWeaterModel> GetCurrentWeatherAsync()
         {
-            if (ApiKey == "" || ApiKey == null)
+            if (ApiKey == "" || City == "")
             {
                 return null;
             }

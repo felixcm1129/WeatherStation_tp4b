@@ -22,13 +22,22 @@ namespace WeatherApp.Services
         public async Task<TemperatureModel> GetTempAsync()
         {
             var temp = await owp.GetCurrentWeatherAsync();
-            var result = new TemperatureModel
+            if (temp == null)
             {
-                DateTime = DateTime.UnixEpoch.AddSeconds(temp.DateTime),
-                Temperature = temp.Main.Temperature
-            };
+                MessageBox.Show("Assurez vous d'avoir une clé valide et une ville valide");
+                return new TemperatureModel();
+            }
+            else 
+            {
+                var result = new TemperatureModel
+                {
+                    DateTime = DateTime.UnixEpoch.AddSeconds(temp.DateTime),
+                    Temperature = temp.Main.Temperature
+                };
 
-            return result;
+                return result;
+            }
+            
         }
 
         public void SetLocation(string location)

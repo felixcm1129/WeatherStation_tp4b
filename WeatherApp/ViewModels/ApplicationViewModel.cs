@@ -94,10 +94,6 @@ namespace WeatherApp.ViewModels
             ///   Si le service de temperature est null
             ///     Assigner le service de température
             /// 
-           
-
-            /// Permet de retrouver le ViewModel avec le nom indiqé
-            CurrentViewModel = ViewModels.FirstOrDefault(x => x.Name == pageName);
 
             if (CurrentViewModel.Name == "ConfigurationViewModel")
             {
@@ -109,6 +105,11 @@ namespace WeatherApp.ViewModels
                     tempViewModel.SetTemperatureService(tempService);
                 }
             }
+
+            /// Permet de retrouver le ViewModel avec le nom indiqé
+            CurrentViewModel = ViewModels.FirstOrDefault(x => x.Name == pageName);
+
+            
         }
 
         #endregion

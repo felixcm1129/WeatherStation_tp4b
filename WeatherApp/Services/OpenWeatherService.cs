@@ -1,8 +1,10 @@
 ﻿using OpenWeatherAPI;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using WeatherApp.ViewModels;
 
 namespace WeatherApp.Services
@@ -20,7 +22,6 @@ namespace WeatherApp.Services
         public async Task<TemperatureModel> GetTempAsync()
         {
             var temp = await owp.GetCurrentWeatherAsync();
-
             var result = new TemperatureModel
             {
                 DateTime = DateTime.UnixEpoch.AddSeconds(temp.DateTime),

@@ -57,33 +57,33 @@ Section "WeatherAppInstaller" ;
   SetOutPath $INSTDIR
   
   ; Put file there
-  File Microsoft.Extensions.Configuration.Abstractions.dll
-  File Microsoft.Extensions.Configuration.Binder.dll
-  File Microsoft.Extensions.Configuration.dll
-  File Microsoft.Extensions.Configuration.FileExtensions.dll
-  File Microsoft.Extensions.Configuration.Json.dll
-  File Microsoft.Extensions.Configuration.UserSecrets.dll
-  File Microsoft.Extensions.DependencyInjection.Abstractions.dll
-  File Microsoft.Extensions.DependencyInjection.dll
-  File Microsoft.Extensions.FileProviders.Abstractions.dll
-  File Microsoft.Extensions.FileProviders.Physical.dll
-  FILE Microsoft.Extensions.FileSystemGlobbing.dll
-  FILE Microsoft.Extensions.Options.ConfigurationExtensions.dll
-  FILE Microsoft.Extensions.Options.dll
-  FILE Microsoft.Extensions.Primitives.dll
-  FILE Newtonsoft.Json.Bson.dll
-  FILE Newtonsoft.Json.dll
-  FILE OpenWeatherAPI.dll
-  FILE OpenWeatherAPI.pdb
-  FILE System.Net.Http.Formatting.dll
-  File WeatherApp.deps.json
-  FILE WeatherApp.dll
-  FILE WeatherApp.exe
-  File WeatherApp.pdb
-  FILE Cloudy.ico
-  FILE appsettings.json
-  File WeatherApp.runtimeconfig.dev.json
-  File WeatherApp.runtimeconfig.json
+  File WeatherApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+  File WeatherApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+  File WeatherApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+  File WeatherApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+  File WeatherApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+  File WeatherApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.UserSecrets.dll
+  File WeatherApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+  File WeatherApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+  File WeatherApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+  File WeatherApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+  FILE WeatherApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+  FILE WeatherApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+  FILE WeatherApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+  FILE WeatherApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+  FILE WeatherApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+  FILE WeatherApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+  FILE WeatherApp\bin\Debug\netcoreapp3.1\OpenWeatherAPI.dll
+  FILE WeatherApp\bin\Debug\netcoreapp3.1\OpenWeatherAPI.pdb
+  FILE WeatherApp\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+  File WeatherApp\bin\Debug\netcoreapp3.1\WeatherApp.deps.json
+  FILE WeatherApp\bin\Debug\netcoreapp3.1\WeatherApp.dll
+  FILE WeatherApp\bin\Debug\netcoreapp3.1\WeatherApp.exe
+  File WeatherApp\bin\Debug\netcoreapp3.1\WeatherApp.pdb
+  FILE WeatherApp\bin\Debug\netcoreapp3.1\Cloudy.ico
+  FILE WeatherApp\bin\Debug\netcoreapp3.1\appsettings.json
+  File WeatherApp\bin\Debug\netcoreapp3.1\WeatherApp.runtimeconfig.dev.json
+  File WeatherApp\bin\Debug\netcoreapp3.1\WeatherApp.runtimeconfig.json
 
   ; Write the installation path into the registry
   WriteRegStr HKLM SOFTWARE\WeatherAppInstaller "Install_Dir" "$INSTDIR"
@@ -145,8 +145,7 @@ Section "Uninstall"
   Delete $INSTDIR\WeatherApp.runtimeconfig.dev.json
   Delete $INSTDIR\WeatherApp.runtimeconfig.json
   Delete $INSTDIR\WeatherApp.pdb
-
-  Delete Cloudy.ico
+  Delete $INSTDIR\Cloudy.ico
 
   ; Remove shortcuts, if any
   Delete "$SMPROGRAMS\1539902\*.lnk"

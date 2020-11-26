@@ -25,14 +25,14 @@ namespace OpenWeatherAPI
         public string BaseURL { get; set; }
         public string EndPoint { get; set; }
 
-        public string Longitude { get; set; } = "-72.7491"; // Shawinigan par défaut
-        public string Latitude { get; set; } = "46.5668";
+        public string Longitude { get; set; } 
+        public string Latitude { get; set; }
 
         private string longUrl;
 
         public string ApiKey { get; set; }
 
-        public string City { get; set; } = "Shawinigan";
+        public string City { get; set; } 
 
         private OpenWeatherProcessor()
         {
@@ -54,7 +54,7 @@ namespace OpenWeatherAPI
             var uriBuilder = new UriBuilder($"{BaseURL}{EndPoint}");
 
             var query = HttpUtility.ParseQueryString(uriBuilder.Query);
-            query["lat"] = Latitude; // Shawinigan
+            query["lat"] = Latitude; 
             query["lon"] = Longitude;
             query["units"] = "metric";
             query["appid"] = ApiKey;

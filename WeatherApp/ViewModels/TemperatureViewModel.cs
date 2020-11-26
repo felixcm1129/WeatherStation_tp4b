@@ -64,7 +64,6 @@ namespace WeatherApp.ViewModels
         public TemperatureViewModel()
         {
             Name = GetType().Name;
-            City = "Shawinigan";
             GetTempCommand = new DelegateCommand<string>(GetTemp, CanGetTemp);
         }
 
